@@ -3,6 +3,8 @@ import App from './App.vue'
 import Vue from 'vue'
 import Home from './views/Home.vue'
 import Sobre from './views/Sobre.vue'
+import ProdutoView from './views/ViewProduto.vue'
+import cardProduto from './views/cardProduto.vue'
 
 const routes = [
   {
@@ -15,6 +17,17 @@ const routes = [
 		name: 'Sobre',
 		component: Sobre,
 	},
+	{
+		path: '/produto-view',
+		name: 'ProdutoView',
+		component: ProdutoView,
+	},
+	{
+		path: '/card-produto',
+		name: 'cardProduto',
+		component: cardProduto,
+	},
+	
   /* {
     path: '/about',
     name: 'about',

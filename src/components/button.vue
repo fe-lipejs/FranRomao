@@ -8,6 +8,7 @@
     background: linear-gradient(89.68deg, #FA4589 0.28%, #FD529F 107.78%);
     border-radius: 100px;
     justify-content:center;
+    
 
 }
 #corpo:active{

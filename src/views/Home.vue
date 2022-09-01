@@ -1,135 +1,164 @@
 <template>
-    <div id="cont">
-        <div>
-            <div id="banner">
-                <div id="textoCartaz">Segredos do mercado de design de unhas revelados</div>
-                <img id="imagemCapa" src="/ImagemCapa.png" alt="">
-                <div id="black"></div>
-                <div id="btn-1"><Button texto='QUERO MEU ACESSO' /></div>
-                <div class="container2">
-                    <div style="display: flex;">
-                        <div id="detalhes">
-                            <div>QUEM SOU EU?</div>
-                        </div>
-                        <img id="profile" src="/imagemProfile.png" alt="">
-                    </div>
-                </div>
-                <div>
-                        <h3>CONHEÇA O NOSSO CURSO</h3>
-                    </div>
-
-                    <img src="/video.png" alt="">
+    <div id="container">
+        <div style="background-color: purple; color:white; padding: 80px;">
+            <h2>Hello World</h2>
+            <h3>Hello there! Just passing by randomly to show this lil test text at home page of this site.</h3>
+            <div class="buttons">
+                <div class="button1">BUTTON 1</div>
+                <div class="button2">BUTTON 2</div>
             </div>
         </div>
-        <div class="container-branco">
-                <h1>JAYNE FERNAND</h1>
-         </div>
+        <h2 style="text-align: center; margin: 50px;">Conheça as nossas novidades!</h2>
+        <div class="content-produtos">
+            <div class="cont-prod">
+                <div class="img"></div>
+                <div class="prodName">Produto Aleatório</div>
+                <div class="prodDesc">Produto Aleatório gerado por uma mente</div>
+                <div class="prodPreco">R$ 79,90</div>
+                <router-link id="sobre-icon" to="/produto-view">
+                    <div class="prodButton">Adicionar ao Carrinho</div>
+                </router-link>
+            </div>
+
+            <div class="cont-prod">
+                <div class="img"></div>
+                <div class="prodName">Produto Aleatório</div>
+                <div class="prodDesc">Produto Aleatório gerado por uma mente</div>
+                <div class="prodPreco">R$ 79,90</div>
+                <router-link id="sobre-icon" to="/produto-view">
+                    <div class="prodButton">Adicionar ao Carrinho</div>
+                </router-link>
+            </div>
+            <div class="cont-prod">
+                <div class="img"></div>
+                <div class="prodName">Produto Aleatório</div>
+                <div class="prodDesc">Produto Aleatório gerado por uma mente</div>
+                <div class="prodPreco">R$ 79,90</div>
+                <router-link id="sobre-icon" to="/produto-view">
+                    <div class="prodButton">Adicionar ao Carrinho</div>
+                </router-link>
+            </div>
+
+        </div>
     </div>
 </template>
 <style>
-.container-branco{
-    background-color: #eee;
-    color:rgb(237, 127, 145);
-    width: 100%;
-    height: 80vh;
+/* 
+body::-webkit-scrollbar {
+  width: 10px;
 }
-#detalhes:active {
-    height: 300px;
-    width: 90vw;
+body::-webkit-scrollbar-track {
+  background-color:#11171a;
+position: absolute; 
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #545454;
+} */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.button1,
+.button2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    width: 50vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: 0.2s;
 }
-#detalhes div {
-    font-weight: 700;
-    transform: rotate(270deg);
-    height: 60px;
+
+.button1:active {
+    background-color: rgb(46, 45, 45);
 }
-#detalhes {
-    height: 300px;
-    width: 20vw;
-    margin-left: 10px;
-    margin-right: 15px;
-    background-color: #DB2F62;
-    border-radius: 10px;
-    transition: all .2s;
+
+.button2:active {
+    background-color: rgba(25, 25, 25, 0.097);
+}
+
+.button1 {
+    background-color: black;
+    padding: 18px;
+}
+
+.button2 {
+    border: 1px white solid;
+    padding: 16px;
+}
+
+.content-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cont-prod {
+    width: 10em;
+    margin: 30px;
+}
+
+.img {
+    height: 12em;
+    width: 100%;
+    background-color: rgb(181, 179, 179);
     cursor: pointer;
 }
 
-#profile {
-    height: 300px;
-    width: 300px;
+.prodName,
+.prodDesc,
+.prodPreco,
+.prodButton {
+    text-align: center;
+    margin: 18px
 }
 
-.container2 {
-    position: absolute;
-    top: 100vh;
-    left: 50%;
-    margin-left: 10px;
-    transform: translate(-50%);
+.prodName {
+    font-size: 17px;
+    font-weight: 300;
 
 }
 
-.container2 img {}
-
-#banner {
-    position: relative
+.prodDesc {
+    font-size: 16px;
+    color: grey;
 }
 
-#imagemCapa {
-    position: absolute;
-    width: 80vh;
-    height: 50vh;
-    text-align: left;
-    left: 50%;
-    margin-left: 10px;
-    transform: translate(-50%);
+.prodPreco {
+    font-weight: 800;
+    font-size: 16px;
 }
 
-#btn-1 {
-    position: absolute;
-    width: 300px;
-    text-align: left;
-    top: 85vh;
-    left: 50%;
-    margin-left: 10px;
-    transform: translate(-50%);
-}
-
-#textoCartaz {
-    position: absolute;
-    font-size: 30px;
-    font-weight: 600;
-    width: 300px;
-    text-align: left;
-    top: 55vh;
-    left: 50%;
-    margin-left: 20px;
-    transform: translate(-50%);
-    z-index: 2;
-}
-
-#black {
-    margin-top: -40;
-}
-
-#black {
+.prodButton {
+    margin-top: -10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
     background-color: black;
-    height: 30vh;
-    width: 100vw;
-}
-
-#titulo {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 56px;
-    color: linear-gradient(90deg, #F53FE3 1.55%, #DB2F62 70.46%);
+    color: white;
+    cursor: pointer
 }
 </style>
 <script>
 import Button from '.././components/button.vue'
+import LateralMenu from '.././components/LateralMenu.vue'
+import Registro from '@/components/Registro.vue'
 
 export default {
     name: "Home",
-    components: { Button }
+    data() {
+        return {
+            image: "@/assets/bg-register.png"
+        }
+    },
+    components: { Button, LateralMenu, Registro },
+    mounted: function () {
+        window.scrollTo(0, 0)
+    }
 }
 </script>

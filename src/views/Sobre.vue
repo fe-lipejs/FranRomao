@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>Sobre nós Page</h1>    
+        <h1>Login Adminitração</h1>    
+        <h3>Em desenvolvimento...</h3>    
     </div>
 </template>
 
